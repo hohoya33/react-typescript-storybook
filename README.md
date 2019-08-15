@@ -1,14 +1,16 @@
-#React + TypeScript + Storybook 프로젝트 설정
+# React + TypeScript + Storybook 프로젝트 설정
 
-#리액트 타입스크립트
+# 리액트 타입스크립트
+```
 npx create-react-app my-app --typescript
+```
 
-
-#SASS
+# SASS
+```
 npm install node-sass --save
+```
 
-
-#스토리북
+# 스토리북
 https://www.vobour.com/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%8A%A4%ED%86%A0%EB%A6%AC%EB%B6%81-react-storybook-%EC%9D%84-%ED%86%B5%ED%95%9C-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EA%B0%9C%EB%B0%9C%EA%B3%BC-%ED%99%9C
 
 https://hyunseob.github.io/2018/01/08/storybook-beginners-guide/
@@ -25,7 +27,7 @@ UI 개발을 하다 보면 빈번하게 일어나는 디자인 스펙 오류, �
 https://storybook.js.org/examples/
 
 
-#스토리북 화면구조
+# 스토리북 화면구조
 * Manager App: 모든 스토리가 나열되는 곳. 여기서 선택된 스토리를 프리뷰 패널에서 확인 할 수 있다.
 * Preview Panel: 매니저 앱에서 선택된 스토리(컴포넌트)가 렌더링 되는 곳
 * Add-on Panel: 다양한 애드온을 통해 컴포넌트와 인터렉션을 하거나 컴포넌트 정보등을 보여주는 곳으로 기본 설치시 Action Logger 패널이 추가되어 있다.
@@ -34,18 +36,18 @@ https://storybook.js.org/examples/
 
 https://www.learnstorybook.com/react/en/get-started/
 
-#스토리북 설치
+# 스토리북 설치
+```
 npm i -D @storybook/react
-
+```
 
 .storybook 폴더 생성
 - addons.js
 - config.js
 - webpack.config.js
 
-mkdir .storybook src
-touch .storybook/config.js .storybook/addons.js .storybook/webpack.config.js
-
+> mkdir .storybook src
+> touch .storybook/config.js .storybook/addons.js .storybook/webpack.config.js
 
 
 package.json
@@ -138,6 +140,7 @@ module.exports = ({config}) => {
 "module": "commonjs", 아래로 변경 에러발생
 "module": "esnext",
 원본
+```
 {
   "compilerOptions": {
     "target": "es5",
@@ -163,12 +166,12 @@ module.exports = ({config}) => {
     "src"
   ]
 }
+```
 
 
 
 
-
-
+```
 
 {
   "compilerOptions": {
@@ -235,11 +238,12 @@ module.exports = ({config}) => {
   ]
 }
 
+```
 
 cd my-react-app && getstorybook
 npm run storybook
 
 
-#타입스크립트
+# 타입스크립트
 interface Props 는 컴포넌트에 들어오는 인자에 대한 타입들을 TypeScript 문법으로 미리 선언
 기존의 React에서는 컴포넌트에서 사용하는 인자들에 대한 정의를 PropTypes로 정의 하였지만 TypeScript는 interface라는 구현체를 구현
